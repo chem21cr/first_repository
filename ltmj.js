@@ -47,18 +47,7 @@ window.onload = () => {
     }
   }
   
-  /**
-   * [onload] テキスト「うな重」を描画
-   */
-  function drawImage2(){
-    const Unaju = new Image();
-    Unaju.src = null;
-    Unaju.onload = () =>{
-      const canvas = document.querySelector("#image2");
-      const ctx = canvas.getContext("2d");
-      ctx.drawImage(Unaju, 20, 0, 100, 150);
-    }
-  }
+ 
   
   /**
    * Canvas合成
