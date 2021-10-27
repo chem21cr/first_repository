@@ -8,21 +8,30 @@ function onload01(){
   
       // img要素に表示
       
+      const Unaju01 = new Image();
+    Unaju01.src = "img01/maid_frame.png";
+   
+
       const Unaju = new Image();
     Unaju.src = blobUrl;
     Unaju.onload = () =>{
       const canvas = document.querySelector("#image2");
       const ctx = canvas.getContext("2d");
+      ctx.globalCompositeOperation = 'destination-over';
+      ctx.drawImage(Unaju01, 0, 0, canvas.width, canvas.height);
       ctx.drawImage(Unaju, 50, 25, 100, 100);}
-  });}
+  });
+
+   
+
+}
 
 window.onload = () => {
     onload01();
     // #image1に画像を描画
     drawImage1();
   
-    // #image2にテキストを描画
-    drawImage2();
+    
   
     // 「+」ボタンを押したら合成
     document.querySelector("#btn-concat").addEventListener("click", ()=>{
@@ -47,36 +56,9 @@ window.onload = () => {
     }
   }
   
-  /**
-   * [onload] テキスト「うな重」を描画
-   */
-  function drawImage2(){
-    const Unaju = new Image();
-    Unaju.src = null;
-    Unaju.onload = () =>{
-      const canvas = document.querySelector("#image2");
-      const ctx = canvas.getContext("2d");
-      ctx.drawImage(Unaju, 20, 0, 100, 150);
-    }
-  }
   
-  /**
-   * Canvas合成
-   *
-   * @param {string} base 合成結果を描画するcanvas(id)
-   * @param {array} asset 合成する素材canvas(id)
-   * @return {void}
-   */
-   async function concatCanvas(base, asset){
-    const canvas = document.querySelector(base);
-    const ctx = canvas.getContext("2d");
   
-       ctx.globalCompositeOperation = 'destination-over';
-    for(let i=0; i<asset.length; i++){
-      const image1 = await getImagefromCanvas(asset[i]);
-      ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
-    }
-  }
+  
   
  
   
@@ -95,5 +77,3 @@ window.onload = () => {
       image.src = ctx.canvas.toDataURL();
     });
   }
-
-
