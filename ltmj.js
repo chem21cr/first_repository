@@ -26,7 +26,7 @@ window.onload = () => {
   
     // 「+」ボタンを押したら合成
     document.querySelector("#btn-concat").addEventListener("click", ()=>{
-      concatCanvas("#concat", ["#image1", "#image2"]);
+      concatCanvas("#concat", ["#image2", "#image1"]);
     });
   
     
