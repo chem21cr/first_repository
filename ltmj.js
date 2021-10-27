@@ -26,7 +26,7 @@ window.onload = () => {
   
     // 「+」ボタンを押したら合成
     document.querySelector("#btn-concat").addEventListener("click", ()=>{
-      concatCanvas("#concat", ["#image1", "#image2"]);
+      concatCanvas("#concat", ["#image2", "#image1"]);
     });
   
     
@@ -60,7 +60,6 @@ window.onload = () => {
     const canvas = document.querySelector(base);
     const ctx = canvas.getContext("2d");
   
-       ctx.globalCompositeOperation = 'destination-over';
     for(let i=0; i<asset.length; i++){
       const image1 = await getImagefromCanvas(asset[i]);
       ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
@@ -84,5 +83,4 @@ window.onload = () => {
       image.src = ctx.canvas.toDataURL();
     });
   }
-
 
