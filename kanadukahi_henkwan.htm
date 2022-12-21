@@ -1,0 +1,88 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>てすてす</title>
+<script>
+function shinkana(){
+var str = document.querySelector("textarea#test").value;
+
+ //いろんな処理
+str = str.replace(/は̌/g, 'わ');
+str = str.replace(/ひ̌/g, 'い');
+str = str.replace(/ふ̌/g, 'う'); 
+str = str.replace(/へ̌/g, 'え');
+str = str.replace(/ほ̌/g, 'お');
+str = str.replace(/あ̈/g, 'お');
+str = str.replace(/か̈/g, 'こ');
+str = str.replace(/さ̈/g, 'そ');
+str = str.replace(/た̈/g, 'と');
+str = str.replace(/な̈/g, 'の');
+str = str.replace(/は̈/g, 'ほ');
+str = str.replace(/ま̈/g, 'も');
+str = str.replace(/や̈/g, 'よ');
+str = str.replace(/ら̈/g, 'ろ');
+str = str.replace(/わ̈/g, 'お');
+str = str.replace(/い̈/g, 'ゆ');
+str = str.replace(/き̈/g, 'きゅ');
+str = str.replace(/し̈/g, 'しゅ');
+str = str.replace(/ち̈/g, 'ちゅ');
+str = str.replace(/に̈/g, 'にゅ');
+str = str.replace(/ひ̈/g, 'ひゅ');
+str = str.replace(/み̈/g, 'みゅ');
+str = str.replace(/り̈/g, 'りゅ');
+str = str.replace(/ゐ̈/g, 'ゆ');
+str = str.replace(/え̈/g, 'よ');
+str = str.replace(/け̈/g, 'きょ');
+str = str.replace(/せ̈/g, 'しょ');
+str = str.replace(/て̈/g, 'ちょ');
+str = str.replace(/ね̈/g, 'にょ');
+str = str.replace(/へ̈/g, 'ひょ');
+str = str.replace(/め̈/g, 'みょ');
+str = str.replace(/れ̈/g, 'りょ');
+str = str.replace(/ゑ̈/g, 'よ');
+str = str.replace(/は̃/g, 'お');
+str = str.replace(/ふ̃/g, 'お');
+str = str.replace(/ゃ̈/g, 'ょ');
+str = str.replace(/くゎ̈/g, 'こ');
+str = str.replace(/くゎ/g, 'か');
+str = str.replace(/ぐゎ̈/g, 'ご');
+str = str.replace(/ぐゎ/g, 'が');
+str = str.replace(/ゐ/g, 'い');
+str = str.replace(/ゑ/g, 'え');
+str = str.replace(/が̈/g, 'ご');
+str = str.replace(/ざ̈/g, 'ぞ');
+str = str.replace(/だ̈/g, 'ど');
+str = str.replace(/ば̈/g, 'ぼ');
+str = str.replace(/ぎ̈/g, 'ぎゅ');
+str = str.replace(/じ̈/g, 'じゅ');
+str = str.replace(/ぢ̈/g, 'ぢゅ');
+str = str.replace(/び̈/g, 'びゅ');
+str = str.replace(/げ̈/g, 'ぎょ');
+str = str.replace(/ぜ̈/g, 'じょ');
+str = str.replace(/で̈/g, 'ぢょ');
+str = str.replace(/べ̈/g, 'びょ');
+str = str.replace(/を̌/g, 'お');
+str = str.replace(/を̈/g, 'う');
+str = str.replace(/ぢ̌/g, 'じ');
+str = str.replace(/づ̌/g, 'ず');
+str = str.replace(/ぢ̃/g, 'じゅ');
+str = str.replace(/で̃/g, 'じょ');
+str = str.replace(/う̈/g, 'お');
+str = str.replace(/ほ̃/g, 'う');
+
+document.querySelector("div#result").innerHTML = str;
+}
+</script>
+<style>
+textarea#test{
+width:100%;
+height:200px;
+}
+</style>
+</head>
+<body>
+<textarea id="test"></textarea>
+<input type="button" value="bt01" onclick="shinkana();"/>
+<div id="result"></br>
+</body>
+</html>
